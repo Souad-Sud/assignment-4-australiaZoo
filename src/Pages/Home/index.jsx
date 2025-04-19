@@ -1,12 +1,13 @@
 import styles from "./home.module.css";
 import mainImg from "../../assets/ai-generated-7700031_640.png"
-import Sidebar from '../../components/Sidebar';
+import SideBar from "../../components/Sidebar";
+
 
 const Home = () => {
     return(
         <main className={styles.main}>
             <div className={styles.sideBar}> 
-            <Sidebar/>         
+           <SideBar  />      
             </div>
             <div>
 
