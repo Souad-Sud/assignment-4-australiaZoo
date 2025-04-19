@@ -1,5 +1,5 @@
 import styles from "./home.module.css";
-import Sidebar from '../../components/Sidebar';
+import Sidebar from '../../components/Sidebar.jsx';
 import mainImg from "../../assets/ai-generated-7700031_640.png"
 
 const Home = () => {

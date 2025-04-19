@@ -1,7 +1,5 @@
 import { useState } from "react";
 import styles from './sidebar.module.css'
-// import SideBarItem from '../Sidebar'
-// import { NavLink } from 'react-router-dom';
 import {AllAnimals} from '../../data/data'
 import SideBarItem from '../SideBarItem';
 
