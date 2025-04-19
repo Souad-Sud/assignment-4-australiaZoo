@@ -1,0 +1,20 @@
+App   
+    -Layout
+
+Create Layout component
+        -<Header />
+        -<Outlet />
+        -<Footer />
+
+Create Header component  
+        -<Logo/>
+        -<DesktopNavigation />
+
+Create Navigation component 
+        -AnimalMenuItem
+            --will take props (pageItem) from DesktopNavigation
+        -DesktopNavigation
+            --map over links from data and pass parameter to <AnimalMenuItem />
+        -MobileNavigation
+
+    
