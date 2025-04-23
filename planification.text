@@ -7,14 +7,59 @@ Create Layout component
         -<Footer />
 
 Create Header component  
-        -<Logo/>
-        -<DesktopNavigation />
+        -<HeaderItem> that will contain: 
+                -- useState() -> active class for DesktopNavigation-Items 
+                -- handleClickMenu -> for the icon in responsive web
+                            -- icon-btn ->takes handleClickMenu
+                            -- Logo img
+                            -- and <DesktopNavigation /> component ->takes props 
 
-Create Navigation component 
-        -AnimalMenuItem
-            --will take props (pageItem) from DesktopNavigation
-        -DesktopNavigation
-            --map over links from data and pass parameter to <AnimalMenuItem />
-        -MobileNavigation
+Create Navigation Component that contains <DesktopNavigation /> component
 
-    
+DesktopNavigation component :
+       --takes the props ({displayMenu})
+       --<AnimalMenuItem/> component
+                   
+
+
+Create page component:
+     --> About --Basic info--
+     --> AnimalPage
+     --> Home
+
+About component
+AnimalPage component:
+     (add text )
+Home component :
+          -->useState()-- for selectedAnimal
+   --> <MainContent />
+           ->animal props
+           ->title props
+   --> <SideBar />
+           ->setSelectedAnimal props
+
+MainContent component : 
+         -> animal props
+         -> title props
+         -> if statement --> if animal is not clicked a message will display otherwise when an animal is clicked will replace that content with the animal description 
+
+SideBar component :
+        -> useState() 
+                   --> isStretched for the sideBar 
+                   -->isBigger fro the pictures in the sideBar
+                   -->active class 
+
+        -> toggleBtnClick--assigned to the icon <List />
+        -> handleAnimalActive -- assigned to the <SideBarItem />
+            
+        -> <SideBarItem />
+              ->take props 
+                   --> animal
+                   --> onClick
+                   --> isBigger
+                   --> isActive
+
+SideBarItem component:
+        -> list of animals 
+
+Footer component

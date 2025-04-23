@@ -1,0 +1,37 @@
+.headerItemContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin: 0 20px 0 20px;
+    justify-content: space-between;
+   
+}
+.menuResponsive {
+    display: flex;
+    flex-direction: row;
+     padding: 20px;
+}
+.openList {
+    display: none;
+}
+@media (max-width: 768px) {
+    
+    .menuResponsive {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin: 0;
+        padding: 3px;
+        justify-content: space-between; 
+        gap: 100px;
+        
+    }
+
+    .openList {
+        cursor: pointer;
+        display: block;
+    }
+
+   
+}

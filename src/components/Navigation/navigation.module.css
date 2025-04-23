@@ -1,19 +1,15 @@
-.navContainerItems {
-    padding: 20px;
-    display: flex;
-    gap: 40px;
-
-}
-.menuItem {
+  .menuItem {
     font-family: "Signika Negative", sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
-    padding-left: 20px;
+    padding-left: 30px;
     color: white;
     position: relative;
     padding-bottom: 11px;
     transition: color 0.3s ease;
-}
+    width: 100%;
+    
+ }
 
 .menuItem.active::after {
     content: "";
@@ -25,8 +21,8 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     animation: underlineIn 0.4s ease-out;
   }
-
-@keyframes underlineIn {
+  
+  @keyframes underlineIn {
     0% {
       width: 0;
       opacity: 0;
@@ -35,4 +31,45 @@
       width: 100%;
       opacity: 1;
     }
-}
+  }
+  @media (max-width: 768px) {
+    
+    .navContainerItems{
+      align-items: center;
+       display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%; 
+      margin-top: 30px;   
+      border: 1px solid black;
+      position: static;
+      transform: none;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      position: absolute;
+      left: -150px;
+      background-color: #B56A7F;
+    }
+    .isVisible {
+      left: 150px;
+    }
+
+    .menuItem.active::after {
+      content: "";
+      position: absolute;
+      left: 10px;
+      bottom: 0;
+      width: 10%;
+      border-bottom: 8px dotted #dad1cd;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      animation: underlineIn 0.4s ease-out;
+    }
+     .menuItem {
+      padding:10px ;
+      margin: 20px;
+    
+    }
+
+  }

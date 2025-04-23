@@ -1,16 +1,22 @@
-const SideBarItem = ({animal, onClick}) => {
+import { getImageUrl } from "../../utils/function.js";
+import styles from './SideBarItem.module.css'
+
+
+const SideBarItem = ({animal, onClick, isBigger, isActive}) => {
+ 
+ 
     return(
         <>
-            <li>
-                <button onClick={onClick}>
-
-                {animal.name}
-                </button>
-
-            </li>
-   
+            <li className={`${styles.itemList} ${isActive ? styles.active : ''}`}
+            onClick={onClick}>
+                <img
+                    src={getImageUrl(animal.image)}
+                    alt={animal.name}
+                    onClick={onClick}
+                    className={`${styles.asideIcon} ${isBigger ? styles.biggerIcon : ''} `}
+                    />  
+            </li> 
         </>
-
     )
 }
 

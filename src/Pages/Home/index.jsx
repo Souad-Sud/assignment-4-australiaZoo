@@ -1,24 +1,19 @@
 import styles from "./home.module.css";
-import mainImg from "../../assets/ai-generated-7700031_640.png"
 import SideBar from "../../components/Sidebar";
+import MainContent from "../../components/MainContent";
+import { useState } from "react";
 
 
 const Home = () => {
+    const [selectedAnimal, setSelectedAnimal] = useState(null)
     return(
-        <main className={styles.main}>
-            <div className={styles.sideBar}> 
-           <SideBar  />      
-            </div>
-            <div>
-
-        <h1>The Australian Animals Exhibition</h1>
-        <h2>Explore the fascinating wildlife of Australia!</h2>
-        <div className={styles.imageContainer}>
-            <img  src={mainImg}   alt="Overlay Image" />
-            <img src={mainImg} alt="Base Image" className={styles.overlayImage}/>
-            </div>
-          </div>
-        </main>
+        <div className={styles.grid}>
+        <MainContent 
+        animal={selectedAnimal}
+        title={selectedAnimal?.group} />
+        {/* if selected animal is not null or undefined it will retrieve value of selectedAnimal.groupand assign it to title prop */}
+        <SideBar setSelectedAnimal = {setSelectedAnimal} />      
+        </div>
     )
 }
 

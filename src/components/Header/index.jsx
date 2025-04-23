@@ -1,15 +1,13 @@
 import  styles from './header.module.css'
-import Logo from  '../Logo'
-import DesktopNavigation from '../Navigation/DesktopNavigation'
+import HeaderItem from  '../HeaderItem'
+
 
 const Header = () => {
-    return(
-        <header className={styles.header}>
-            <Logo/>
-            <DesktopNavigation />
-        </header>
-        
 
+    return(
+        <header className={styles.header}>         
+            <HeaderItem />        
+        </header>
     )
 }
 

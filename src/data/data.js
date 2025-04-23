@@ -1,7 +1,10 @@
 export const pagesLinks = ["Home", "Birds", "Mammals", "Reptiles", "About"]
+export const birdsImg = ["bird1.png","bird3.png", "bird2.png"]
+export const reptilesImg = ["reptile1.png", "reptile2.png", "reptile3.png"]
+export const mammalsImg = ["mammal1.png", "mammal2.png", "mammal3.png"]
 
 
-function Animal (name, lifespan, group, food, description, length, weigh, found, src) {
+function Animal (name, lifespan, group, food, description, length, weigh, found, image) {
     this.name = name;
     this.lifespan = lifespan;
     this.group = group;
@@ -10,7 +13,7 @@ function Animal (name, lifespan, group, food, description, length, weigh, found,
     this.length = length;
     this.weigh = weigh;
     this.found = found;
-    this.src = src
+    this.image = image
 }
 
 let Birds = [
@@ -22,7 +25,7 @@ let Birds = [
             "1.7m", 
             "44kg", 
             "Queensland", 
-            '../images/cassowary.jpeg'),
+            'Cassowary.png'),
     new Animal("Kookaburra",
            "20 years", 
            "Birds", 
@@ -31,7 +34,7 @@ let Birds = [
            "43cm",
            "300g", 
            "Australia wide", 
-           '../images/kooka.jpeg'),
+           'Kookaburra.png'),
     new Animal("Yellow-Tailed-Black-Cockatoo",
            "41 years", 
            "Birds", 
@@ -40,9 +43,8 @@ let Birds = [
            "65 cm", 
            "900 grams", 
            "SE Australia", 
-           '../images/yellow-tailed-cockatoo.jpeg')
+           'Tailed-Black-cockatoo.png')
 ];
-
 
 let Mammals = [
     new Animal("Echidna", 
@@ -53,7 +55,7 @@ let Mammals = [
             "76cm", 
             "10kg", 
             "Throughout Australia", 
-            '../images/Echidna1.png'),
+            'Echidna.png'),
     new Animal("Tasmanian Devil", 
             "5 years", 
             "Mammals", 
@@ -62,7 +64,7 @@ let Mammals = [
             "70cm",
             "10kg",
             "Tasmania", 
-            '../images/free-photo-of-koala-sleeping tas.jpeg'),
+            'TasmanianDevil.png'),
     new Animal("Quokka",
             "10 years", 
             "Mammals", 
@@ -71,8 +73,7 @@ let Mammals = [
             "50 cm", 
             "3kg", 
             "Only found on Rottnest Island and a few places on mainland Western Australia.", 
-            '../images/Quokka.jpeg')
-            
+            'Quokka.png')            
 ];
    
 let Reptiles = [
@@ -84,7 +85,7 @@ let Reptiles = [
                 "90 cm", 
                 "1 kg", 
                 "Northern Australia", 
-                '../images/frill-necked-lizard.png'),
+                'Frilled-neck-Lizard.png'),
         new Animal("Hawksbill-Turtle", 
                 "50 years", 
                 "Reptiles", 
@@ -93,7 +94,7 @@ let Reptiles = [
                 "80 cm (carapace)",
                 "50 kg",
                 "Tropical coasts of Queensland, Northern Territory and Western Australia", 
-                '../images/Hawksbill-Turtle.png'),
+                'HawksbillTurtle.jpg'),
         new Animal("Perentie",
                 "20 years", 
                 "Reptiles", 
@@ -102,10 +103,9 @@ let Reptiles = [
                 "2.5 m", 
                 "20 kg", 
                 "Deserts.", 
-                '../images/Perentie.png')
+                'Perentie.jpg')
                 
-    ];
-
+];
 
 const AllAnimals = [...Birds, ...Mammals, ...Reptiles]
 export {AllAnimals, Birds, Mammals, Reptiles};
@@ -114,4 +114,19 @@ export const animalCategory = [
     ...new Set(AllAnimals.map((animal) => animal.group)),
 ];
 
+export const  mammalNames = AllAnimals
+  .filter(animal => animal.group === "Mammals")
+  .map(animal => animal.name);
+
+export const birdNames = AllAnimals
+  .filter(animal => animal.group === "Birds")
+  .map(animal => animal.name); 
+
+export const reptileNames = AllAnimals
+  .filter(animal => animal.group === "Reptiles")
+  .map(animal => animal.name);
+
+  console.log(mammalNames);
+  console.log(birdNames);
+  console.log(reptileNames);
 
