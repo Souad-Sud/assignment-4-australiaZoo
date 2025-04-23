@@ -1,5 +1,5 @@
 import mainImg from "../../assets/ai-generated-7700031_640.png"
-import styles from './MainContent.module.css'
+import styles from './mainContent.module.css'
 import { getImageUrl } from "../../utils/function"
 import { useNavigate } from 'react-router-dom';
 
