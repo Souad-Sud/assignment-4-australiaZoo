@@ -1,5 +1,5 @@
 import { getImageUrl } from "../../utils/function.js";
-import styles from './SideBarItem.module.css'
+import styles from './sideBarItem.module.css'
 
 
 const SideBarItem = ({animal, onClick, isBigger, isActive}) => {

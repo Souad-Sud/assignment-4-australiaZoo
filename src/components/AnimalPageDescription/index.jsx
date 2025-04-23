@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { getImageUrl } from "../../utils/function.js";
-import styles from './AnimalPageDescription.module.css'
+import styles from './animalPageDescription.module.css'
 
 const AnimalPageDescription = ({animal}) => {
     const [displayList, setDisplayList] = useState(false)
