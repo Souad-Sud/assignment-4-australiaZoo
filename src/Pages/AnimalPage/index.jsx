@@ -7,6 +7,7 @@ import AnimalPageDescription from '../../components/AnimalPageDescription';
 // import { useParams } from 'react-router-dom';
 
 const AnimalPage = ({ title }) => {
+  const [activeClass, setIsActiveClass] = useState(false)
     
 const [selectedGroupAnimal, setSelectedGroupAnimal] = useState(null);
 useEffect(() => {
@@ -17,6 +18,7 @@ useEffect(() => {
 
   const handleClickSelectedGroupAnimal = (animal) => {
     setSelectedGroupAnimal(animal)
+    setIsActiveClass(animal.name)
   };
 
   const imgGroup = {
@@ -35,14 +37,21 @@ useEffect(() => {
     <div className={styles.animalGroup}>
         <div className={styles.animalGroupSideBar}>
             <h1>{title}</h1>
-        <ul className={styles.animalFroupList}>
-            {animals.map((animal) => (
+        <ul className={styles.animalroupList}>
+            {animals.map((animal) => {
+              const isActive = animal.name === activeClass;
+              return(
+
                 <li key={animal.name}>
-                    <button onClick={() => handleClickSelectedGroupAnimal(animal)} className={styles.animaGroupBtn}>
+                    <button onClick={() => handleClickSelectedGroupAnimal(animal)} 
+                    className={`
+                    ${styles.animaGroupBtn}
+                    ${isActive ? styles.bakgroundColor : ''}`}>
                       {animal.name}
                     </button>
                 </li>
-            ))}
+              );
+            })}
         </ul>
         </div>
             {selectedGroupAnimal ? (<AnimalPageDescription animal={selectedGroupAnimal}/>

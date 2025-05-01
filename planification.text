@@ -1,5 +1,5 @@
 App   
-    -Layout
+    -Layout wrapped in Routes
 
 Create Layout component
         -<Header />
@@ -12,40 +12,53 @@ Create Header component
                 -- handleClickMenu -> for the icon in responsive web
                             -- icon-btn ->takes handleClickMenu
                             -- Logo img
-                            -- and <DesktopNavigation /> component ->takes props 
+                            -- and <DesktopNavigation /> component ->takes props to display menu
 
 Create Navigation Component that contains <DesktopNavigation /> component
 
 DesktopNavigation component :
-       --takes the props ({displayMenu})
+       --takes props ({displayMenu})
        --<AnimalMenuItem/> component
-                   
+
+AnimalMenuItem component : 
+      --take props ({pageItem}) and navLink to display animals            
 
 
 Create page component:
-     --> About --Basic info--
+     --> About takes ({title}) as props
      --> AnimalPage
      --> Home
 
-About component
 AnimalPage component:
-     (add text )
+     -->useState() for seletced animal
+     -->useEffect()  => with first argument (setSelectedAnimal) resetting it to null
+                     =>dependency array [title] = if title stays the same between renders React skip or stopp running this effect
+     -->Filter animals based on the title
+     -->create an object of array of image and assign image to the title
+     -->If selectedGroupAnimal === to animal display animal description to <AnimalPageDescription />
+   
+
+AnimalPageDescription component: 
+      -->takes a props ({animal})
+      -->useState() : to display the details about each animal on onlick =>toggleList()
+    
+
 Home component :
           -->useState()-- for selectedAnimal
    --> <MainContent />
-           ->animal props
-           ->title props
-   --> <SideBar />
+           ->takes props ({animal, title})
+           ->useNavigate() to change route like Link
+   --> <HomeSideBar />
            ->setSelectedAnimal props
 
 MainContent component : 
-         -> animal props
-         -> title props
+         ->takes props ({animal, title})
          -> if statement --> if animal is not clicked a message will display otherwise when an animal is clicked will replace that content with the animal description 
 
-SideBar component :
+HomeSideBar component :
+        ->take props ({setSelectedAnimal})
         -> useState() 
-                   --> isStretched for the sideBar 
+                   -->isStretched for the sideBar 
                    -->isBigger fro the pictures in the sideBar
                    -->active class 
 

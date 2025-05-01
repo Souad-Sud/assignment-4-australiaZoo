@@ -4,7 +4,7 @@ import {AllAnimals} from '../../data/data'
 import SideBarItem from '../SideBarItem';
 import {List}  from "@phosphor-icons/react";
 
-const SideBar = ({setSelectedAnimal}) => {
+const HomeSideBar = ({setSelectedAnimal}) => {
     const [isStretched, setIsStretched] = useState(false);
     const [isBigger, setIsBigger] = useState(false);
     const [activeAnimalName, setActiveAnimalName] = useState(null);
@@ -41,4 +41,4 @@ const SideBar = ({setSelectedAnimal}) => {
   );
 };
 
-export default SideBar;
+export default HomeSideBar;

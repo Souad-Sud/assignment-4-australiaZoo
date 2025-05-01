@@ -1,5 +1,5 @@
 import styles from "./home.module.css";
-import SideBar from "../../components/Sidebar";
+import HomeSideBar from "../../components/HomeSidebar";
 import MainContent from "../../components/MainContent";
 import { useState } from "react";
 
@@ -12,7 +12,7 @@ const Home = () => {
         animal={selectedAnimal}
         title={selectedAnimal?.group} />
         {/* if selected animal is not null or undefined it will retrieve value of selectedAnimal.groupand assign it to title prop */}
-        <SideBar setSelectedAnimal = {setSelectedAnimal} />      
+        <HomeSideBar setSelectedAnimal = {setSelectedAnimal} />      
         </div>
     )
 }

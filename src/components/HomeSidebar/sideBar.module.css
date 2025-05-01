@@ -1,7 +1,6 @@
 .listContainer{
     width: 90px;
     margin: 50px 0 0 0; 
-   
     grid-area: side;
     border-top-right-radius: 80px 80px;
     border-bottom-right-radius: 80px 80px;

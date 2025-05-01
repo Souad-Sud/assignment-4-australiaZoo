@@ -6,6 +6,7 @@
     align-items: center;   
      
 }
+
 .animalGroupDisplay p {
     padding: 10px;
 }
@@ -39,6 +40,9 @@
     font-size: 1.1rem;
 }
 
+.btn.bgcl {
+    background-color: rgb(20, 45, 65);
+}
 .group {
     margin: 5px 0 100px 0;
 }

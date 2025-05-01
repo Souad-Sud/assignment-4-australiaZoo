@@ -5,7 +5,7 @@ const About = ({title}) => {
     return(
         <div className={styles.aboutContainer}>
             <div className={styles.aboutSubtitle}>
-            <h1>{title}</h1>
+            <h2>{title}</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, eligendi, itaque culpa tempora officiis nostrum dignissimos architecto nisi natus repellendus quo fuga illum ullam iure cupiditate suscipit iste tempore voluptates!</p>
              <button>Contact us</button>
             </div>

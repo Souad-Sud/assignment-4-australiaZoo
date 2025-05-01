@@ -10,12 +10,12 @@ const AnimalPageDescription = ({animal}) => {
             
     return(
         <div className={styles.animalGroupDisplay}>
-            <h1>{animal.name}</h1>
+            <h2>{animal.name}</h2>
             <p>{animal.description}</p>
             <div className={styles.animalImage}>
             <img src={getImageUrl(animal.image)} alt="" />
             </div>
-             <button onClick={toggleList} className={styles.btn}>Show details</button>
+             <button onClick={toggleList} className={`${styles.btn} ${displayList ? styles.bgcl : ""}`}>Show details</button>
                 <div className={styles.group}>
                     <ul className={`${styles.groupDescription} ${displayList ? styles.show : styles.hidden}`}>
                         <li className={styles.child}>Lifespan: {animal.lifespan}</li>

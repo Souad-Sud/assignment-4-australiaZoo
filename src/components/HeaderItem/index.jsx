@@ -16,20 +16,16 @@ const HeaderItem = () => {
     return(
         <div className={styles.headerItemContainer}>
             <div className={styles.menuResponsive}>
-
-            <div className={styles.list}>            
-                <List size={40} className={styles.openList} onClick={handleClickMenu} />
+                <div className={styles.list}>            
+                    <List size={40} className={styles.openList} onClick={handleClickMenu} />
+                </div>
+                <div className={styles.logo}>
+                    <img src={LogoImg} alt="logo" height={80} width={100}/>        
+                </div>
             </div>
-            <div className={styles.logo}>
-            <img src={LogoImg} alt="logo" height={80} width={100}/>        
-            </div>
-            </div>
-
             <div>
-            <DesktopNavigation displayMenu={displayMenu}/>
+                <DesktopNavigation displayMenu={displayMenu}/>
             </div>
-            
-    
         </div>
    
 )
