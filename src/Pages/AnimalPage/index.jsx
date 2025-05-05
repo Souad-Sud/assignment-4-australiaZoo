@@ -1,25 +1,26 @@
 import { useState, useEffect } from 'react';
 import styles from './animalPage.module.css'
 import { getImageUrl } from "../../utils/function.js";
+import{Link, useParams } from 'react-router-dom'
 import { AllAnimals } from '../../data/data';
 import { birdsImg, reptilesImg, mammalsImg } from '../../data/data';
 import AnimalPageDescription from '../../components/AnimalPageDescription';
 // import { useParams } from 'react-router-dom';
 
 const AnimalPage = ({ title }) => {
+  const {name} = useParams();
   const [activeClass, setIsActiveClass] = useState(false)
     
-const [selectedGroupAnimal, setSelectedGroupAnimal] = useState(null);
+// const [selectedGroupAnimal, setSelectedGroupAnimal] = useState(null);
 useEffect(() => {
-    setSelectedGroupAnimal(null);
-  }, [title]);
+  setIsActiveClass(name || null);
+  }, [name]);
   // Filter animals based on the title
   const animals = AllAnimals.filter(animal => animal.group.toLowerCase() === title.toLowerCase());
 
-  const handleClickSelectedGroupAnimal = (animal) => {
-    setSelectedGroupAnimal(animal)
-    setIsActiveClass(animal.name)
-  };
+  const selectedGroupAnimal = AllAnimals.find(
+    (animal) => animal.name.toLowerCase() === (name?.toLowerCase() || '')
+  );
 
   const imgGroup = {
     birds : birdsImg,
@@ -43,12 +44,12 @@ useEffect(() => {
               return(
 
                 <li key={animal.name}>
-                    <button onClick={() => handleClickSelectedGroupAnimal(animal)} 
-                    className={`
-                    ${styles.animaGroupBtn}
-                    ${isActive ? styles.bakgroundColor : ''}`}>
-                      {animal.name}
-                    </button>
+                    <Link
+                  to={`/${title}/${animal.name}`}
+                  className={`${styles.animaGroupBtn} ${isActive ? styles.bakgroundColor : ''}`}
+                >
+                  {animal.name}
+                </Link>
                 </li>
               );
             })}

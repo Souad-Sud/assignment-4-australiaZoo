@@ -41,7 +41,8 @@
 }
 
 .btn.bgcl {
-    background-color: rgb(20, 45, 65);
+    box-shadow: 0 0 15px rgb(97, 83, 83);
+    background-color: #e87394;
 }
 .group {
     margin: 5px 0 100px 0;

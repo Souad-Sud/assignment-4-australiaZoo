@@ -5,6 +5,7 @@
     grid-template-areas: 
       "side main main main"
       "side main main main";
+      
 }
 
 .animalGroupSideBar {
@@ -15,11 +16,13 @@
     height: auto;
     
     
+    
 }
 
 .animalroupList {
     border: 1px solid rgba(102, 22, 22, 0.405);
     display: flex;
+    padding: 30px;
     border-radius: 20px;
     flex-direction: column;
     justify-content: center;
@@ -28,23 +31,35 @@
 }
 .animalroupList li {
     list-style: none;
+    padding: 10px 0 10px 0;
+}
+
+.animalroupList li a {
+    color: #f6e6d3;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 8px;
+    font-size: bold;
 }
 
 .animaGroupBtn.bakgroundColor {
-    background-color: rgb(190, 102, 2);
+    box-shadow: 0 0 15px rgb(97, 83, 83);
+    background-color: #e87394;
+    border-radius: 10px;
 }
 
-.animalroupList li button {
+/* .animalroupList li a {
     /* background-color: red; */
-    background-color: #B56A7F; 
+    /* background-color: #B56A7F; 
     padding: 10px 20px;
     border: 1px solid #F2EAE0;
     border-radius: 20px;
     color: #F2EAE0;
     cursor: pointer;
     margin: 20px 20px;
-    font-size: 1.1rem;
+    font-size: 1.1rem; 
 }
+ */
 .animalGroupMainMsg {
      grid-area: main;
 }
