@@ -24,7 +24,7 @@ const HeaderItem = () => {
                 </div>
             </div>
             <div>
-                <DesktopNavigation displayMenu={displayMenu}/>
+                <DesktopNavigation displayMenu={displayMenu} setDisplayMenu={setDisplayMenu}/>
             </div>
         </div>
    
