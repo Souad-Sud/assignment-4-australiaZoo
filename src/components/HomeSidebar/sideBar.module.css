@@ -71,4 +71,9 @@
       width: 90px;
     }
 
+    .listBtn {
+        display: none;
+
+    }
+
 }
