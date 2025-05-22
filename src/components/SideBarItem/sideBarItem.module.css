@@ -34,3 +34,13 @@
     border: 2px solid red;
 }
 
+
+.itemList {
+     list-style: none;
+  display: flex;         /* or block, depending on your layout */
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;       /* Adds pointer for clarity */
+  user-select: none;
+}

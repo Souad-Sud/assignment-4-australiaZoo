@@ -9,9 +9,9 @@ const SideBarItem = ({animal, isBigger, isActive, onClick}) => {
                 <img
                     src={getImageUrl(animal.image)}
                     alt={animal.name}
-                    onClick={onClick}
                     className={`${styles.asideIcon} ${isBigger ? styles.biggerIcon : ''} `}
                 />  
+                {console.log(animal.name)}
             </li> 
         </>
     )
